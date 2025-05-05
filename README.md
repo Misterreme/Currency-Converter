@@ -16,7 +16,8 @@ A simple web application that allows users to convert between different currenci
 
 ## 📷 Screenshot
 
-> [Screnshot]()
+![Screnshot](/src/assets/images/capture.png)
+![Screnshot](/src/assets/images/capture2.png)
 
 ## ⚙️ How to Use
 
