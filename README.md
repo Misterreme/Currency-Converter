@@ -29,7 +29,12 @@ A simple web application that allows users to convert between different currenci
 - Click "Convert" to get the conversion result.
 
 ### Example: 
-```From: USD
+```
+From: USD
 To: EUR
 Amount: 100
 Result: 92.35 EUR
+```
+
+# Pages: 
+- [CurrencyConverter](https://misterreme.github.io/Currency-Converter/)
