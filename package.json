@@ -1,0 +1,12 @@
+{
+  "name": "currency-converter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["currency, converter, conversor, moneda, convertir"],
+  "author": "Enmanuel Núñez nunezemmanuel107@gmail.com",
+  "license": "MIT",
+  "description": "A very easy and simple currency converter to use."
+}
