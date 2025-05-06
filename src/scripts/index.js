@@ -47,15 +47,15 @@ async function changeCurrency() {
     let fromCurrency = fromSelect.value;
     let toCurrency = toSelect.value;
 
-    fromSelect.value = toCurrency
-    toSelect.value = fromCurrency
+    fromSelect.value = toCurrency;
+    toSelect.value = fromCurrency;
 
     const data = await consumeApi();
     if (data !== undefined) {
         totalInput.value = data.result;
         console.log("working!");
-    }
-    
+    };
+
     return data;
 }
 
@@ -71,7 +71,7 @@ async function app(event) {
     const data = await consumeApi();
 
     if (data === undefined) {
-        showError("Complete this field!");
+        showError("¡Completa este campo!");
         return;
     }
     
@@ -89,8 +89,8 @@ async function consumeApi() {
     const amount = amountInput.value;
 
     if (!from || !to || !amount) {
-        showError("Complete this field!");
-        return
+        showError("¡Completa este campo!");
+        return;
     };
 
     try {
@@ -109,12 +109,14 @@ async function consumeApi() {
 function showError(message) {
     amountInput.classList.add("error")
     amountInput.placeholder = message;
+    totalInput.placeholder = message;
     return;
 };
 
 function hiddeError() {
     amountInput.classList.remove("error")
     amountInput.placeholder = "";
+    totalInput.placeholder = "";
     return; 
 };
 
