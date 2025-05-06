@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <link rel="stylesheet" href="./src/styles/styles.css">
     <link rel="shortcut icon" href="./src/assets/logos/favicon.png" type="image/png">
@@ -16,24 +16,24 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="https://misterreme.github.io/Currency-Converter/" />
     <meta name="twitter:image" content="../assets/images/twitter-img.png" />
-    <title>Currency Exchanges</title>
+    <title>Currency Swap</title>
 </head>
 <body>
 
     <main class="main-container">
         <nav class="navbar">
-            <h2 class="navbar-title">CurrencyConverter</h2>
+            <h2 class="navbar-title">CurrencySwap</h2>
 
             <div class="navbar-menu">
                 <ul class="nav-ul-menu">
                     <a href="#main-section">
-                        <li>Home</li>
+                        <li>Inicio</li>
                     </a>
                     <a href="#info-section">
-                        <li>About</li>
+                        <li>Acerca de</li>
                     </a>
                     <a href="#contact-section">
-                        <li>Contact</li>
+                        <li>Contactanos</li>
                     </a>
                 </ul>
 
@@ -45,16 +45,16 @@
         </nav>
 
         <section class="main-section" id="main-section">
-            <h1 class="page-title">Currency Conversion Made Simple</h1>
-            <p class="page-subtitle">Fast, reliable currency exchange rates at your fingertips</p>
+            <h1 class="page-title">Conversor De Monedas Simplificado</h1>
+            <p class="page-subtitle">Tipos de cambio de divisas rápido y fiable a tu alcance</p>
 
             <form action="/" class="page-form" id="convert-form">
-                <label for="amount-input" class="amount-text">Amount</label>
+                <label for="amount-input" class="amount-text">Monto</label>
                 <input type="text" id="amount-input" class="amount-input">
 
                 <div class="select-currency-container">
                     <div class="from-currency-container">
-                        <label for="from-currency">From currency</label>
+                        <label for="from-currency">Desde</label>
                         <select id="from-currency" class="from-currency">
                             <button><selectedcontent class="selected-content"></selectedcontent></button>
 
@@ -344,7 +344,7 @@
                                 </div>
                             </option>
                             
-                            <option value="VEF">
+                            <option value="VEF" disabled>
                                 <div select-content>
                                     <img src="./src/assets/images/banderas/VE.svg" alt="VEF Currency" class="img-currency">
                                     <p>
@@ -361,7 +361,7 @@
                     <div class="separator" id="change-currency"></div>
 
                     <div class="to-currency-container">
-                        <label for="to-currency">To currency</label>
+                        <label for="to-currency">Hacia</label>
                         <select id="to-currency" class="to-currency">
                             <button><selectedcontent class="selected-content"></selectedcontent></button>
 
@@ -673,7 +673,7 @@
                                 </div>
                             </option>
                             
-                            <option value="VEF">
+                            <option value="VEF" disabled>
                                 <div select-content>
                                     <img src="./src/assets/images/banderas/VE.svg" alt="VEF Currency" class="img-currency">
                                     <p>
@@ -688,11 +688,11 @@
                 </div>
                 <label for="total-input" class="total-text" id="total-text">Total</label>
                 <input type="text" id="total-input" class="total-input" readonly>
-                <input type="submit" class="convert-button" id="convert-button" value="Convert">
+                <input type="submit" class="convert-button" id="convert-button" value="Convertir">
             </form>
         </section>
         <section class="info-section" id="info-section">
-            <h2 class="info-title">About Our Currency Converter</h2>
+            <h2 class="info-title">Sobre Nuestro Conversor De Monedas</h2>
             <div class="info-cards-container">
                 <div class="card">
                     <div class="img-container">
@@ -703,8 +703,8 @@
                             <path d="M20 20v-5h-5" />
                           </svg>     
                     </div>
-                    <h3 class="cards-title">Real-Time Conversions</h3>
-                    <p class="cards-text">Get the latest exchange rates for accurate currency conversions, updated regularly.</p>
+                    <h3 class="cards-title">Conversiones en tiempo real</h3>
+                    <p class="cards-text">Obtenga los tipos de cambio más recientes para conversiones de divisas precisas, actualizados periódicamente.</p>
                 </div>
                 <div class="card">
                     <div class="img-container">
@@ -717,8 +717,8 @@
                             <path d="M12 18v3" />
                           </svg>                          
                     </div>
-                    <h3 class="cards-title">Simple Interface</h3>
-                    <p class="cards-text">Clean, intuitive design makes converting currencies quick and hassle-free.</p>
+                    <h3 class="cards-title">Interfaz Sencilla</h3>
+                    <p class="cards-text">El diseño limpio e intuitivo hace que la conversión de divisas sea rápida y sin complicaciones.</p>
                 </div>
                 <div class="card">
                     <div class="img-container">
@@ -728,31 +728,31 @@
                             <path d="M10 10V9a2 2 0 1 1 4 0v1" />
                           </svg>                          
                     </div>
-                    <h3 class="cards-title">Secure & Private</h3>
-                    <p class="cards-text">Your conversions are private and secure, with no data stored on our servers.</p>
+                    <h3 class="cards-title">Seguro & Privado</h3>
+                    <p class="cards-text">Sus conversiones son privadas y seguras, sin datos almacenados en nuestros servidores.</p>
                 </div>
             </div>
         </section>
         <section class="contact-section" id="contact-section">
-            <h2 class="contact-title">Contact Us</h2>
-            <p class="contact-subtitle">Have questions or feedback? We'd love to hear from you.</p>
+            <h2 class="contact-title">Contactanos</h2>
+            <p class="contact-subtitle">¿Tienes preguntas o comentarios? Nos encantaría saber tu opinión.</p>
             <form target="_blank" action="https://formsubmit.co/jijijija0624@gmail.com" method="POST" class="contact-form">
                 <div class="inputs-container">
                     <div class="name-input-container">
-                        <label for="name-input">Name</label>
-                        <input type="text" class="name-input" id="name-input" name="name" placeholder="Your Name" required>
+                        <label for="name-input">Nombre</label>
+                        <input type="text" class="name-input" id="name-input" name="name" placeholder="Tu nombre" required>
                     </div>
     
                     <div class="email-input-container">
-                        <label for="email-input">Email</label>
-                        <input type="email" class="email-input" id="email-input" name="email" placeholder="Your Email" require>
+                        <label for="email-input">Correo/Email</label>
+                        <input type="email" class="email-input" id="email-input" name="email" placeholder="Tu correo" require>
                     </div>
                 </div>
                 <div class="textarea-container">
-                    <label for="message-textarea" class="textarea-title">Message</label>
-                    <textarea id="message-textarea" class="message-textarea" placeholder="Your message" name="message" required></textarea>
+                    <label for="message-textarea" class="textarea-title">Mensaje</label>
+                    <textarea id="message-textarea" class="message-textarea" placeholder="Tu mensaje" name="message" required></textarea>
                 </div>
-                <button type="submit" class="send-message-button" id="send-messge-button">Send Message</button>
+                <button type="submit" class="send-message-button" id="send-messge-button">Enviar Mensaje</button>
             </form>
         </section>
 
@@ -761,18 +761,18 @@
     <footer class="page-footer" id="footer">
         <div class="footer-info">
             <h2 class="footer-title">CurrencySwap</h2>
-            <p class="footer-info-text">Simple, fast and reliable currency converter for all your needs.</p>
+            <p class="footer-info-text">Conversor de divisas sencillo, rápido y fiable para todas tus necesidades.</p>
         </div>
         <div class="footer-links">
-            <h2 class="footer-title">Quick Links</h2>
+            <h2 class="footer-title">Links rápidos</h2>
             <p class="footer-links-list">
-                <a href="#main-section"><span>Home</span></a>
-                <a href="#info-section"><span>About</span></a>
-                <a href="#contact-section"><span>Contact</span></a>
+                <a href="#main-section"><span>Inicio</span></a>
+                <a href="#info-section"><span>Acerca de</span></a>
+                <a href="#contact-section"><span>Contacto</span></a>
             </p>
         </div>
         <div class="footer-contact">
-            <h2 class="footer-title">Connect</h2>
+            <h2 class="footer-title">Redes Sociales</h2>
             <a href="https://x.com/Misterr_eme" target="_blank">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill="currentColor" d="M22.46 6.003c-.793.352-1.644.59-2.538.697a4.482 4.482 0 001.966-2.47 8.934 8.934 0 01-2.828 1.083 4.466 4.466 0 00-7.608 4.072A12.678 12.678 0 013.153 4.865a4.465 4.465 0 001.382 5.954 4.425 4.425 0 01-2.023-.558v.056a4.467 4.467 0 003.582 4.376 4.46 4.46 0 01-2.017.077 4.469 4.469 0 004.17 3.1 8.963 8.963 0 01-5.555 1.917c-.361 0-.717-.021-1.068-.063a12.646 12.646 0 006.86 2.01c8.232 0 12.739-6.822 12.739-12.739 0-.194-.004-.387-.013-.579a9.097 9.097 0 002.237-2.313z"/>
@@ -786,7 +786,7 @@
         </div>
         <div class="copyright-container">
             <hr class="footer-separator">
-            <p class="copyright">© 2025 CurrencySwap. All rights reserved.</p>
+            <p class="copyright">© 2025 CurrencySwap. Todos los derechos reservados.</p>
         </div>
     </footer>
 
