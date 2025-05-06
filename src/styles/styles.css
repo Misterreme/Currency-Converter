@@ -145,14 +145,14 @@ body {
 }
 
 .navbar .theme-button .sun {
-    background-image: url("../assets/images/sun-icon.png");
+    background-image: url("/Currency-Converter/assets/images/sun-icon.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 25px 25px;
 }
 
 .navbar .theme-button .moon {
-    background-image: url("../assets/images/moon-icon.svg");
+    background-image: url("/Currency-Converter/assets/images/moon-icon.svg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 25px 25px;
