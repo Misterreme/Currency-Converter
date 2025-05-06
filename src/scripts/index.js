@@ -7,7 +7,7 @@ const totalInput = document.getElementById("total-input");
 const totalText = document.getElementById("total-text");
 const changeCurrencyButton = document.getElementById("change-currency");
 const toggleThemeButton = document.getElementById("theme-button");
-const html = document.querySelector("html")
+const html = document.querySelector("html");
 
 const API = 'https://currency-conversion-and-exchange-rates.p.rapidapi.com/convert?';
 const options = {
@@ -32,16 +32,16 @@ function toggleTheme() {
     } else {
         html.classList.add("light");
         html.style.colorScheme = "light";
-    }
+    };
 
     const theme = html.classList.contains("dark") ? "dark" : "light";
     localStorage.setItem("theme", theme);
-}
+};
 
 if (currentTheme === "dark") {
     html.classList.add("dark");
     html.style.colorScheme = "dark"
-} 
+};
 
 function changeCurrency() {
     let fromCurrency = fromSelect.value;
@@ -83,7 +83,7 @@ async function consumeApi() {
     if (!from || !to || !amount) {
         showError("Complete this field!");
         return
-    }
+    };
 
     try {
 
