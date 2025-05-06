@@ -8,6 +8,8 @@ const totalText = document.getElementById("total-text");
 const changeCurrencyButton = document.getElementById("change-currency");
 const toggleThemeButton = document.getElementById("theme-button");
 const html = document.querySelector("html");
+const closeModal = document.getElementById("close-modal-button");
+const updateMessage = document.getElementById("update-message");
 
 const API = 'https://currency-conversion-and-exchange-rates.p.rapidapi.com/convert?';
 const options = {
@@ -18,6 +20,20 @@ const options = {
 	}
 };
 
+const currentVersion = "v1";
+
+window.onload = function() {
+    
+    if (localStorage.getItem("updateVersion") !== currentVersion) {
+        updateMessage.showModal();
+    };
+    
+    closeModal.addEventListener("click", (event) => {
+        updateMessage.close();
+        localStorage.setItem("updateVersion", currentVersion);
+    });
+};
+
 changeCurrencyButton.addEventListener("click", (changeCurrency));
 convertButton.addEventListener("click", app);
 toggleThemeButton.addEventListener("click", toggleTheme);
@@ -25,7 +41,7 @@ toggleThemeButton.addEventListener("click", toggleTheme);
 const currentTheme = localStorage.getItem("theme");
 function toggleTheme() {
     const isDark = html.classList.toggle("dark");
-
+    
     if (isDark) {
         html.classList.remove("light");
         html.style.colorScheme = "dark";
@@ -33,7 +49,7 @@ function toggleTheme() {
         html.classList.add("light");
         html.style.colorScheme = "light";
     };
-
+    
     const theme = html.classList.contains("dark") ? "dark" : "light";
     localStorage.setItem("theme", theme);
 };
