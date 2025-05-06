@@ -43,13 +43,21 @@ if (currentTheme === "dark") {
     html.style.colorScheme = "dark"
 };
 
-function changeCurrency() {
+async function changeCurrency() {
     let fromCurrency = fromSelect.value;
     let toCurrency = toSelect.value;
 
     fromSelect.value = toCurrency
     toSelect.value = fromCurrency
-};
+
+    const data = await consumeApi();
+    if (data !== undefined) {
+        totalInput.value = data.result;
+        console.log("working!");
+    }
+    
+    return data;
+}
 
 async function fetchData(urlApi) {
     const response = await fetch(urlApi, options);
