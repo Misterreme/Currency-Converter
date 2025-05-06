@@ -341,6 +341,11 @@ body {
     color: light-dark(var(--color-white), var(--color-dark));
 }
 
+.from-currency option:disabled,
+.to-currency option:disabled {
+    background: light-dark(var(--gray-700), var(--gray-500));
+}
+
 .from-currency option:hover,
 .to-currency option:hover {
     opacity: 0.5;
@@ -406,7 +411,7 @@ option:not(option:last-of-type) {
     gap: 10px;    
     width: 100%;
     margin: 0 0px 0 0;
-    background: light-dark(var(--color-dark), var(--color-white));
+    /* background: light-dark(var(--color-dark), var(--color-white)); */
 }
 
 .from-currency option div p:nth-of-type(1), 
@@ -482,7 +487,7 @@ option:not(option:last-of-type) {
 .info-section .info-cards-container .card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
     text-align: center;
     width: 350px;
