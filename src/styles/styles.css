@@ -90,7 +90,7 @@ body {
     padding: 20px;
     border: 1px solid light-dark(transparent, var(--gray-700));
     border-radius: 4px;
-    background: light-dark(var(whitesmoke), var(--color-inf-section));
+    background: light-dark(rgba(245, 245, 245, 0.9), rgba(14, 19, 40, 0.9));
 }
 
 .update-message::backdrop {
@@ -820,8 +820,9 @@ option:not(option:last-of-type) {
      
      @media (max-width: 640px) {
          .update-message {
-            height: 80%;
-            width: 90%
+            height: 60%;
+            width: 90%;
+            padding: 20px 0;
         }
         
          .navbar {
