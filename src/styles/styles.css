@@ -817,6 +817,11 @@ option:not(option:last-of-type) {
 }
      */
 
+     .update-message {
+        height: 80%;
+        width: 90%
+    }
+
      @media (max-width: 640px) {
         .navbar {
             padding: 0 20px;
