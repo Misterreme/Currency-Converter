@@ -20,7 +20,7 @@ const options = {
 	}
 };
 
-const currentVersion = "v1.02";
+const currentVersion = "v1.03";
 
 window.onload = function() {
     
