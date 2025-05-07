@@ -91,6 +91,31 @@ body {
     border: 1px solid light-dark(transparent, var(--gray-700));
     border-radius: 4px;
     background: light-dark(rgba(245, 245, 245, 0.9), rgba(14, 19, 40, 0.9));
+    animation: openUpdateMessage 0.5s both;
+}
+
+.update-message.closeModal {
+    animation: closeUpdateMessage 0.5s forwards;
+}
+
+
+@keyframes openUpdateMessage {
+    0% {
+        transform: translateX(-60%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes closeUpdateMessage {
+    100% {
+        transform: translateX(-60%);
+        opacity: 0;
+    }
 }
 
 .update-message::backdrop {
