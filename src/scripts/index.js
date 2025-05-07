@@ -20,7 +20,7 @@ const options = {
 	}
 };
 
-const currentVersion = "v1.04";
+const currentVersion = "v1.05";
 
 window.onload = function() {
     
@@ -29,8 +29,11 @@ window.onload = function() {
     };
     
     closeModal.addEventListener("click", (event) => {
-        updateMessage.close();
-        localStorage.setItem("updateVersion", currentVersion);
+        updateMessage.classList.add("closeModal");
+        setTimeout(() => {
+            updateMessage.close();
+            localStorage.setItem("updateVersion", currentVersion);
+        }, 500)
     });
 };
 
