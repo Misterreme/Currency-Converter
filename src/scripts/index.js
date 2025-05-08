@@ -7,10 +7,15 @@ const totalInput = document.getElementById("total-input");
 const totalText = document.getElementById("total-text");
 const changeCurrencyButton = document.getElementById("change-currency");
 const toggleThemeButton = document.getElementById("theme-button");
+const toggleMenuThemeButton = document.getElementById("theme-button-movile");
 const html = document.querySelector("html");
 const closeModal = document.getElementById("close-modal-button");
 const updateMessage = document.getElementById("update-message");
-
+const asideList = document.getElementById("mobile-menu-ul");
+const closeMenuButton = document.getElementById("close-button");
+const openMenuButton = document.getElementById("open-menu-movile-button");
+const menuMovileBackdrop = document.getElementById("menu-movile-backdrop");
+const movileMenu = document.getElementById("mobile-menu");
 const API = 'https://currency-conversion-and-exchange-rates.p.rapidapi.com/convert?';
 const options = {
 	method: 'GET',
@@ -20,7 +25,7 @@ const options = {
 	}
 };
 
-const currentVersion = "v1.05";
+const currentVersion = "v1.06";
 
 window.onload = function() {
     
@@ -37,9 +42,41 @@ window.onload = function() {
     });
 };
 
+document.addEventListener('click', (event) => {
+    const clickedLi = event.target.closest('li');
+    const allLis = asideList.querySelectorAll('li');
+    
+    // Primero removemos la clase de todos los li
+    allLis.forEach(li => li.classList.remove('clicked'));
+    
+    // Si el click fue en un li dentro de asideList, le agregamos la clase
+    if (clickedLi && asideList.contains(clickedLi)) {
+        clickedLi.classList.add('clicked');
+        movileMenu.classList.remove("open");
+        menuMovileBackdrop.classList.remove("backdrop");
+    }
+});
+
+openMenuButton.addEventListener("click", (event) => {
+    movileMenu.classList.add("open");
+    menuMovileBackdrop.style.display = "block";
+    menuMovileBackdrop.classList.add("backdrop");
+});
+
+closeMenuButton.addEventListener("click", (event) => {
+    movileMenu.classList.remove("open");
+    menuMovileBackdrop.classList.remove("backdrop");
+})
+
+menuMovileBackdrop.addEventListener("click", (event) => {
+    movileMenu.classList.remove("open");
+    menuMovileBackdrop.classList.remove("backdrop");
+})
+
 changeCurrencyButton.addEventListener("click", (changeCurrency));
 convertButton.addEventListener("click", app);
 toggleThemeButton.addEventListener("click", toggleTheme);
+toggleMenuThemeButton.addEventListener("click", toggleTheme);
 
 const currentTheme = localStorage.getItem("theme");
 function toggleTheme() {
@@ -138,5 +175,3 @@ function hiddeError() {
     totalInput.placeholder = "";
     return; 
 };
-
-

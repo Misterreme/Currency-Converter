@@ -24,6 +24,7 @@
 <body>
     <main class="main-container">
         <nav class="navbar">
+
             <h2 class="navbar-title">CurrencySwap</h2>
 
             <div class="navbar-menu">
@@ -43,20 +44,58 @@
                     <span class="icon sun"></span>
                     <span class="icon moon"></span>
                 </button>
+
             </div>
+            <div class="open-menu-movile-button" id="open-menu-movile-button"></div>
+            <aside class="mobile-menu" id="mobile-menu">
+                <div class="mobile-menu-content">
+                    <div class="button-container">
+                        <div class="close-button" id="close-button"></div>
+                        <button class="theme-button-movile" id="theme-button-movile">
+                            <span class="icon sun"></span>
+                            <span class="icon moon"></span>
+                        </button>
+                    </div>
+                    <ul class="mobile-menu-ul" id="mobile-menu-ul">
+                        <a href="#main-section">
+                            <li>
+                                <img src="./src/assets/images/home-icon.png" alt="alt" width="20px" height="20px" style="object-fit: contain;">
+                                <span class="li-text">Inicio</span>
+                            </li>
+                        </a>
+                        <a href="#info-section">
+                            <li>
+                                <img src="./src/assets/images/about-icon.png" alt="" width="20px">
+                                <span class="li-text">Acerca de</span>
+                            </li>
+                        </a>
+                        <a href="#contact-section">
+                            <li>
+                                <img src="./src/assets/images/contact-icon.png" alt="" width="20px">
+                                <span class="li-text">Contactanos</span>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </aside>
+            <div class="menu-movile-backdrop" id="menu-movile-backdrop"></div>
         </nav>
 
         <dialog class="update-message" id="update-message">
             <div class="update-message-content">
                 <div class="update-message-texts">
-                    <h2 class="update-message-title">¡Actualización!</h2>
-                    <p class="update-message-subtitle">Notas de versión V1.04</p>
+                    <h2 class="update-message-title">¡Versión 1.06!</h2>
+                    <p class="update-message-subtitle">Notas de versión</p>
                 </div>
     
                 <ul class="update-message-list">
-                    <li>¡Nuevos paises agregados a la lista de divisas!</li>
-                    <li>¡Bugs visuales en la version de movil arreglados!</li>
+                    <li>¡Nuevo menu móvil!</li>
+                    <li>¡Bugs visuales en la versión de movil arreglados!</li>
+                    <li>¡Nuevos países agregados a la lista de divisas!</li>
                     <li>Cambio de bolivar venezolano a otras divisas desactivado temporalmente.</li>
+                    <li>Nuevas animaciones dentro de la página.</li>
+                    <li>Cambio de gradientes en los títulos.</li>
+                    <li>Cambios visuales pequeños.</li>
                 </ul>
     
                 <button class="update-message-button" id="close-modal-button">Cerrar</button>
