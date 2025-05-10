@@ -42,19 +42,25 @@ window.onload = function() {
     });
 };
 
+let currentClickedLi = null;
+
 document.addEventListener('click', (event) => {
     const clickedLi = event.target.closest('li');
-    const allLis = asideList.querySelectorAll('li');
-    
-    // Primero removemos la clase de todos los li
-    allLis.forEach(li => li.classList.remove('clicked'));
-    
-    // Si el click fue en un li dentro de asideList, le agregamos la clase
+
     if (clickedLi && asideList.contains(clickedLi)) {
+        
+        if (clickedLi !== currentClickedLi) {
+            if (currentClickedLi) {
+                currentClickedLi.classList.remove("clicked");
+            };
+        };
+
         clickedLi.classList.add('clicked');
+        currentClickedLi = clickedLi
+
         movileMenu.classList.remove("open");
         menuMovileBackdrop.classList.remove("backdrop");
-    }
+    };
 });
 
 openMenuButton.addEventListener("click", (event) => {
@@ -66,12 +72,12 @@ openMenuButton.addEventListener("click", (event) => {
 closeMenuButton.addEventListener("click", (event) => {
     movileMenu.classList.remove("open");
     menuMovileBackdrop.classList.remove("backdrop");
-})
+});
 
 menuMovileBackdrop.addEventListener("click", (event) => {
     movileMenu.classList.remove("open");
     menuMovileBackdrop.classList.remove("backdrop");
-})
+});
 
 changeCurrencyButton.addEventListener("click", (changeCurrency));
 convertButton.addEventListener("click", app);
@@ -96,7 +102,7 @@ function toggleTheme() {
 
 if (currentTheme === "dark") {
     html.classList.add("dark");
-    html.style.colorScheme = "dark"
+    html.style.colorScheme = "dark";
 };
 
 async function changeCurrency() {
@@ -129,7 +135,7 @@ async function app(event) {
     if (data === undefined) {
         showError("¡Completa este campo!");
         return;
-    }
+    };
     
     totalText.style.display = "block";
     totalInput.style.display = "block";

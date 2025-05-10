@@ -254,7 +254,6 @@ body {
     position: absolute;
     top: 9%;
     left: 9%;
-    
 }
 
 .navbar .theme-button .sun {
@@ -284,11 +283,11 @@ body {
 
 .mobile-menu {
     height: 100dvh;
-    width: 50%;
-    right: -250%;
+    width: 70%;
+    right: -500px;
+    top: 0;
     position: fixed;
-    top: 0%;
-    display: block;
+    display: none;
     transition: all 0.5s;
     z-index: 1000;
 }
@@ -300,8 +299,7 @@ body {
 .menu-movile-backdrop {
     width: 100%;
     height: 1400px;
-    background-color: var(--gray-900);
-    opacity: 0.8;
+    backdrop-filter: blur(1em);
     right: -250%;
     position: fixed;
     z-index: 999;
@@ -407,7 +405,7 @@ body {
     width: 100%;
     padding: 10px;
     border-radius: 8px;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     transition: all 0.5s;
     display: flex;
     justify-content: start;
@@ -419,24 +417,75 @@ body {
 }
 
 .mobile-menu .mobile-menu-content ul li .li-text {
-    font-weight: bold;
+    /* font-weight: bold;
     background: linear-gradient(90deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: transparent;
+    color: transparent; */
     margin: 0 0 0 10px;
+}
+
+.mobile-menu-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.house {
+    background-image: url("../assets/images/icons/home.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+
+.about {
+    background-image: url("../assets/images/icons/info.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+
+.contact {
+    background-image: url("../assets/images/icons/contact.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
 }
 
 .mobile-menu .mobile-menu-content ul a li:hover {
     background: light-dark(white, var(--color-dark));
     transform: scale(1.05);
+    background: linear-gradient(90deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: bold;
 }
 
 .mobile-menu .mobile-menu-content ul li.clicked {
     border: 2px solid light-dark(white, var(--color-dark));
     background: light-dark(white, var(--color-dark));
     transform: scale(1.05);
+    border: 2px solid var(--accent-hover);
+    background: linear-gradient(90deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: bold;
+}
+
+.mobile-menu .mobile-menu-content ul li.clicked .house {
+    background-image: url("../assets/images/icons/home-select.svg");
+}
+
+.mobile-menu .mobile-menu-content ul li.clicked .about {
+    background-image: url("../assets/images/icons/info-select.svg");
+}
+
+.mobile-menu .mobile-menu-content ul li.clicked .contact {
+    background-image: url("../assets/images/icons/contact-select.svg");
 }
 
 .main-section .page-title {
@@ -1002,11 +1051,11 @@ option:not(option:last-of-type) {
  
     .navbar {
         padding: 0 20px;
-        height: auto;
         flex-direction: row;
         justify-content: space-between;
         gap: 15px;
         padding: 15px;
+        height: 10vh;
     }
 
     .navbar .navbar-menu ul {
@@ -1025,6 +1074,9 @@ option:not(option:last-of-type) {
 
     .open-menu-movile-button {
         display: block;
+        position: fixed;
+        right: 5%;
+        background-color: light-dark(whitesmoke, var(--color-inf-section));
     }
 
     #theme-button-movile {
@@ -1127,3 +1179,4 @@ option:not(option:last-of-type) {
         gap: 15px;
     }
 }
+
